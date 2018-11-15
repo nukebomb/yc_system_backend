@@ -8,14 +8,15 @@ var randomData = {
     return result
   },
   createDateArr: function (start, end) {
-    var result = [start]
+
+    var result = []
     var currentStart = new Date(start)
     var realStart = currentStart.getTime()
     var currentEnd = new Date(end)
     var realEnd = currentEnd.getTime()
     var between = (realEnd - realStart) / 86400000
     var current = null
-    for (let i = 1; i <= between; i++) {
+    for (let i = 0; i <= between; i++) {
       current = new Date(Number(realStart) + i * 86400000)
       var Y = current.getFullYear()
       var M = current.getMonth() + 1 < 10 ? '0' + (current.getMonth() + 1) : (current.getMonth() + 1)
@@ -29,7 +30,7 @@ var randomData = {
     var realStart = currentStart.getTime()
     var currentEnd = new Date(end)
     var realEnd = currentEnd.getTime()
-    return (realEnd - realStart) / 86400000
+    return (realEnd - realStart) / 86400000 + 1
   }
 }
 

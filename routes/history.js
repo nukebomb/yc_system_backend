@@ -37,5 +37,30 @@ router.get('/all/:start/:end', function (req, res) {
   })
 })
 
+router.get('/zones/:start/:end', function (req, res) {
+  var start = req.params.start
+  var end = req.params.end
+  let datetime = randomData.createDateArr(start, end)
+  let length = randomData.computeLength(start, end)
+  let chenghua = randomData.randomArr(100, 300, length)
+  let gaoxing = randomData.randomArr(100, 300, length)
+  let shuangliu = randomData.randomArr(100, 300, length)
+  let jinniu = randomData.randomArr(100, 300, length)
+  let wuhou = randomData.randomArr(100, 300, length)
+  let qingyang = randomData.randomArr(100, 300, length)
+
+  res.json({
+    name: 'eachZones',
+    category: datetime,
+    data: {
+      chenghua,
+      gaoxing,
+      shuangliu,
+      jinniu,
+      wuhou,
+      qingyang
+    }
+  })
+})
 
 module.exports = router;
