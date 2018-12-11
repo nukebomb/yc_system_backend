@@ -1,3 +1,4 @@
+var fs = require('fs')
 var express = require('express');
 var router = express.Router();
 
@@ -10,48 +11,38 @@ router.all('*', function (req, res, next) {
   next();
 })
 
-var randomSettedPoints = (function() {
-  let reuslt = {
-    location: null,
-    pm10: null,
-    color: null,
-    
-  }
-})()
+// 创建点位信息，并保存为json文件，用于调用，每次运行默认不运行
+// var randomSettedPoints = (function () {
+//   let result = []
+//   var colors = ['yellow','red','green', 'blue']
+//   var maxWidth = 10417795346 - 10401795346
+//   var maxHeight = 3070994585 - 3061994585
+//   for (var i = 0; i < 80; i++) {
+//     result.push({
 
-router.get('/', function(req, res) {
-  res.json({
-    data: [
-     
-      {
-        id: '1440-0028-sclw-2814', // 最右端
-        color: 'yellow',
-        location: 'xxx区新兴路yy号',
-        rank: '1级',
-        positionX: 104.17795346,
-        positionY: 30.67994585
-      },
-      {
-        id: 'XHHB-Y0017040100175', // 最下最左
-        color: 'yellow',
-        location: 'xxx区新兴路yy号',
-        rank: '1级',
-        positionX: 104.01795346,
-        positionY: 30.61994585
-      },
-  
-      {
-        id: 'Y0028152017154', // 最上
-        color: 'blue',
-        location: 'xxx区新兴路yy号',
-        rank: '0级',
-        positionX: 104.11795346,
-        positionY: 30.70994585
-      },
-      
-    ]
+//       location: 'xx-路-号',
+//       pm10: Math.floor(Math.random() * 200) + 1,
+//       color: colors[Math.floor(Math.random() * 4)],
+//       positionX: (10401795346 + Math.floor(Math.random() * maxWidth) +1) / 100000000 ,
+//       positionY: (3061994585 + Math.floor(Math.random() * maxHeight) + 1) / 100000000
+//     })
+//   }
+//   fs.writeFile('./points.json',JSON.stringify(result))
+//   return result
+// })()
+
+
+
+router.get('/', function (req, res) {
+  var data = fs.readFile('./points.json', function(err, data) {
+    if(err) {
+      return console.log(err)
+    }
+    res.json(
+      JSON.parse(data)
+    )
   })
-}) 
+})
 
 
 module.exports = router

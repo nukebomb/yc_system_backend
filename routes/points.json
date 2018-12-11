@@ -1,0 +1,562 @@
+[
+  {
+    "location": "xx-路-号",
+    "pm10": 92,
+    "color": "yellow",
+    "positionX": 104.13464001,
+    "positionY": 30.68018855
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 15,
+    "color": "green",
+    "positionX": 104.06431061,
+    "positionY": 30.647783
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 160,
+    "color": "yellow",
+    "positionX": 104.16246044,
+    "positionY": 30.6558689
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 197,
+    "color": "green",
+    "positionX": 104.16524319,
+    "positionY": 30.67003099
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 83,
+    "color": "red",
+    "positionX": 104.05237218,
+    "positionY": 30.66353396
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 180,
+    "color": "blue",
+    "positionX": 104.03787072,
+    "positionY": 30.63956101
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 106,
+    "color": "red",
+    "positionX": 104.14057014,
+    "positionY": 30.66011075
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 167,
+    "color": "blue",
+    "positionX": 104.13317974,
+    "positionY": 30.62289694
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 157,
+    "color": "blue",
+    "positionX": 104.09686486,
+    "positionY": 30.67525155
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 164,
+    "color": "blue",
+    "positionX": 104.0477474,
+    "positionY": 30.66103973
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 76,
+    "color": "blue",
+    "positionX": 104.07351445,
+    "positionY": 30.69609692
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 19,
+    "color": "blue",
+    "positionX": 104.02772627,
+    "positionY": 30.68250137
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 179,
+    "color": "green",
+    "positionX": 104.05131386,
+    "positionY": 30.68104533
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 143,
+    "color": "red",
+    "positionX": 104.0417124,
+    "positionY": 30.69661831
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 78,
+    "color": "yellow",
+    "positionX": 104.10242204,
+    "positionY": 30.62234721
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 164,
+    "color": "yellow",
+    "positionX": 104.16127071,
+    "positionY": 30.64338138
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 46,
+    "color": "green",
+    "positionX": 104.04901314,
+    "positionY": 30.63131255
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 142,
+    "color": "red",
+    "positionX": 104.14967348,
+    "positionY": 30.69834588
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 141,
+    "color": "yellow",
+    "positionX": 104.10165615,
+    "positionY": 30.65373171
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 143,
+    "color": "red",
+    "positionX": 104.07067918,
+    "positionY": 30.62700316
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 102,
+    "color": "blue",
+    "positionX": 104.10529326,
+    "positionY": 30.6202484
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 80,
+    "color": "red",
+    "positionX": 104.08816018,
+    "positionY": 30.6724076
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 7,
+    "color": "red",
+    "positionX": 104.16537465,
+    "positionY": 30.65505571
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 190,
+    "color": "yellow",
+    "positionX": 104.11761727,
+    "positionY": 30.6885066
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 157,
+    "color": "green",
+    "positionX": 104.02988247,
+    "positionY": 30.68802906
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 155,
+    "color": "yellow",
+    "positionX": 104.0882496,
+    "positionY": 30.66097478
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 88,
+    "color": "blue",
+    "positionX": 104.15914622,
+    "positionY": 30.66895187
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 86,
+    "color": "yellow",
+    "positionX": 104.04931921,
+    "positionY": 30.6762067
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 18,
+    "color": "blue",
+    "positionX": 104.09852007,
+    "positionY": 30.65787146
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 49,
+    "color": "blue",
+    "positionX": 104.12392123,
+    "positionY": 30.65406166
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 9,
+    "color": "yellow",
+    "positionX": 104.1130298,
+    "positionY": 30.64453269
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 163,
+    "color": "red",
+    "positionX": 104.02626622,
+    "positionY": 30.70074643
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 194,
+    "color": "green",
+    "positionX": 104.07488778,
+    "positionY": 30.66015885
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 16,
+    "color": "yellow",
+    "positionX": 104.07142312,
+    "positionY": 30.70667494
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 31,
+    "color": "green",
+    "positionX": 104.01964683,
+    "positionY": 30.66524644
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 112,
+    "color": "yellow",
+    "positionX": 104.06688047,
+    "positionY": 30.6983461
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 12,
+    "color": "yellow",
+    "positionX": 104.16135171,
+    "positionY": 30.67753818
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 139,
+    "color": "yellow",
+    "positionX": 104.02435041,
+    "positionY": 30.63350072
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 148,
+    "color": "green",
+    "positionX": 104.10017804,
+    "positionY": 30.70652395
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 25,
+    "color": "yellow",
+    "positionX": 104.09096329,
+    "positionY": 30.68739236
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 69,
+    "color": "green",
+    "positionX": 104.07484613,
+    "positionY": 30.65665303
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 197,
+    "color": "red",
+    "positionX": 104.02216215,
+    "positionY": 30.63669012
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 23,
+    "color": "yellow",
+    "positionX": 104.10642842,
+    "positionY": 30.6562154
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 142,
+    "color": "yellow",
+    "positionX": 104.08807037,
+    "positionY": 30.69196325
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 57,
+    "color": "green",
+    "positionX": 104.10796112,
+    "positionY": 30.68179346
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 153,
+    "color": "yellow",
+    "positionX": 104.04556993,
+    "positionY": 30.62300733
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 9,
+    "color": "blue",
+    "positionX": 104.06360861,
+    "positionY": 30.67302255
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 170,
+    "color": "yellow",
+    "positionX": 104.05170749,
+    "positionY": 30.64183868
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 115,
+    "color": "blue",
+    "positionX": 104.1286561,
+    "positionY": 30.69781281
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 120,
+    "color": "blue",
+    "positionX": 104.04427612,
+    "positionY": 30.68142037
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 134,
+    "color": "green",
+    "positionX": 104.11944718,
+    "positionY": 30.65425948
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 22,
+    "color": "red",
+    "positionX": 104.12030342,
+    "positionY": 30.64641738
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 1,
+    "color": "yellow",
+    "positionX": 104.13802556,
+    "positionY": 30.66915401
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 138,
+    "color": "blue",
+    "positionX": 104.03628168,
+    "positionY": 30.70569118
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 74,
+    "color": "yellow",
+    "positionX": 104.17678564,
+    "positionY": 30.68459967
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 96,
+    "color": "green",
+    "positionX": 104.14033045,
+    "positionY": 30.70392886
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 135,
+    "color": "red",
+    "positionX": 104.0707544,
+    "positionY": 30.66371318
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 18,
+    "color": "yellow",
+    "positionX": 104.15310146,
+    "positionY": 30.68144213
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 200,
+    "color": "blue",
+    "positionX": 104.15939511,
+    "positionY": 30.67027436
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 181,
+    "color": "blue",
+    "positionX": 104.07957354,
+    "positionY": 30.70343334
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 156,
+    "color": "green",
+    "positionX": 104.02572177,
+    "positionY": 30.66587865
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 38,
+    "color": "red",
+    "positionX": 104.15048011,
+    "positionY": 30.64073999
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 94,
+    "color": "yellow",
+    "positionX": 104.06870077,
+    "positionY": 30.63400128
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 60,
+    "color": "blue",
+    "positionX": 104.09657625,
+    "positionY": 30.65844518
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 39,
+    "color": "green",
+    "positionX": 104.03478078,
+    "positionY": 30.7012939
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 166,
+    "color": "blue",
+    "positionX": 104.08382827,
+    "positionY": 30.68016462
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 193,
+    "color": "green",
+    "positionX": 104.06914977,
+    "positionY": 30.67769644
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 86,
+    "color": "green",
+    "positionX": 104.04811906,
+    "positionY": 30.66789104
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 38,
+    "color": "blue",
+    "positionX": 104.16810955,
+    "positionY": 30.634293
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 200,
+    "color": "blue",
+    "positionX": 104.0954247,
+    "positionY": 30.62734388
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 109,
+    "color": "red",
+    "positionX": 104.06010613,
+    "positionY": 30.68722738
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 146,
+    "color": "yellow",
+    "positionX": 104.12778618,
+    "positionY": 30.64120915
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 33,
+    "color": "green",
+    "positionX": 104.14734726,
+    "positionY": 30.63634771
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 194,
+    "color": "blue",
+    "positionX": 104.15775998,
+    "positionY": 30.69366126
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 132,
+    "color": "red",
+    "positionX": 104.07375473,
+    "positionY": 30.69373427
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 56,
+    "color": "green",
+    "positionX": 104.09697224,
+    "positionY": 30.69504868
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 172,
+    "color": "red",
+    "positionX": 104.12942998,
+    "positionY": 30.63275557
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 174,
+    "color": "green",
+    "positionX": 104.16315778,
+    "positionY": 30.63968227
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 164,
+    "color": "yellow",
+    "positionX": 104.02559663,
+    "positionY": 30.65554148
+  },
+  {
+    "location": "xx-路-号",
+    "pm10": 179,
+    "color": "red",
+    "positionX": 104.08115319,
+    "positionY": 30.67538078
+  }
+]
