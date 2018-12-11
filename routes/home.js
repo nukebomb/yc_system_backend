@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-// var randomData = require('./randomData')
+var randomData = require('./randomData')
 
 /* GET home page. */
 router.all('*', function (req, res, next) {
@@ -72,25 +72,19 @@ router.get('/chengdu', function(req, res) {
 //   })
 // })
 
-// router.get('/search/:startdata', function (req, res) {
-//   var area = JSON.parse(req.params.startdata).area
-//   if (area[0] === 'allcity') {
-//     area = '全市'
-//   } else {
-//     switch (area[1]) {
-//       case 'chenghua':
+router.get('/search/:area/:date', function (req, res) {
+  var area = req.params.area
+  // var date = JSON.parse(req.params).date
+  var date = JSON.parse(req.params.date)
+  var category = randomData.createMonthArr(date.startMonth, date.endMonth)
+  var data = randomData.randomArr(20, 280,randomData.howmanyMonth)
+  res.json({
+    area: req.params.area,
+    category,
+    data
+  })
+})
 
-//     }
-//   }
-//   var date = JSON.parse(req.params.startdata).date
-//   let datetime = randomData.createDateArr(date[0], date[1])
-//   let length = randomData.computeLength(date[0], date[1])
-//   res.json({
-//     dateCategory: datetime,
-//     data: randomData.randomArr(100, 500, length),
-//     pickedArea: area
-//   })
-// })
 // function randomArr(start, end, length) {
 //   var result = []
 //   for (let i = 0; i < length; i++) {
@@ -98,4 +92,5 @@ router.get('/chengdu', function(req, res) {
 //   }
 //   return result
 // }
+
 module.exports = router;
