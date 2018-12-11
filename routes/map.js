@@ -14,7 +14,7 @@ router.all('*', function (req, res, next) {
 // 创建点位信息，并保存为json文件，用于调用，每次运行默认不运行
 // var randomSettedPoints = (function () {
 //   let result = []
-//   var colors = ['yellow','red','green', 'blue']
+//   var colors = ['yellow','red','orange', 'blue']
 //   var maxWidth = 10417795346 - 10401795346
 //   var maxHeight = 3070994585 - 3061994585
 //   for (var i = 0; i < 80; i++) {
@@ -23,6 +23,7 @@ router.all('*', function (req, res, next) {
 //       location: 'xx-路-号',
 //       pm10: Math.floor(Math.random() * 200) + 1,
 //       color: colors[Math.floor(Math.random() * 4)],
+//       id: 'xy-m89x'+ Math.floor(Math.random() * 10000)+'sc',
 //       positionX: (10401795346 + Math.floor(Math.random() * maxWidth) +1) / 100000000 ,
 //       positionY: (3061994585 + Math.floor(Math.random() * maxHeight) + 1) / 100000000
 //     })
