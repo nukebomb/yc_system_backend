@@ -17,16 +17,16 @@ router.get('/years', function (req, res) {
   res.json({
     name: "byyear",
     // chenghuaqu: randomArr(100, 500, 10),
-// gaoxinqu: randomArr(100, 500, 10),
-// shuangliuqu: randomArr(100, 500, 10),
-// jinniuqu: randomArr(100, 500, 10),
-// wuhouqu: randomArr(100, 500, 10),
-// qingyangqu: randomArr(100, 500, 10),
-// quanshi: randomArr(100, 500, 10)
+    // gaoxinqu: randomArr(100, 500, 10),
+    // shuangliuqu: randomArr(100, 500, 10),
+    // jinniuqu: randomArr(100, 500, 10),
+    // wuhouqu: randomArr(100, 500, 10),
+    // qingyangqu: randomArr(100, 500, 10),
+    // quanshi: randomArr(100, 500, 10)
   })
 })
 
-router.get('/chengdu', function(req, res) {
+router.get('/chengdu', function (req, res) {
   res.json({
     name: 'chengduByyear',
     allCity: [
@@ -74,12 +74,31 @@ router.get('/chengdu', function(req, res) {
 
 router.get('/search/:area/:date', function (req, res) {
   var area = req.params.area
-  // var date = JSON.parse(req.params).date
   var date = JSON.parse(req.params.date)
   var category = randomData.createMonthArr(date.startMonth, date.endMonth)
-  var data = randomData.randomArr(20, 280,randomData.howmanyMonth)
+  var data = randomData.randomArr(20, 280, randomData.howmanyMonth)
+  switch (area) {
+    case 'allcity':
+      area = '全市'
+      break;
+    case 'chenghua':
+      area = '成华区'
+      break;
+    case 'wuhou':
+      area = '武侯区'
+      break;
+    case 'gaoxin':
+      area = '高新区'
+      break;
+    case 'shaungliu':
+      area = '双流区'
+      break;
+    case 'jingliu':
+      area = '金牛区'
+      break;
+  }
   res.json({
-    area: req.params.area,
+    area,
     category,
     data
   })

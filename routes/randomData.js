@@ -6,6 +6,7 @@ var randomData = {
     for (let i = 0; i < length; i++) {
       result.push(Math.floor(Math.random() * (end - start)) + start)
     }
+    this.howmanyMonth = 0
     return result
   },
   createDateArr: function (start, end) {
@@ -42,8 +43,6 @@ var randomData = {
       result.push(Y + '-' + M)
       current.setMonth(current.getMonth() + 1)
     }
-
-    
     return result
   },
   computeLength(start, end) {
