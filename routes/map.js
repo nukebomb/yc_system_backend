@@ -10,44 +10,21 @@ router.all('*', function (req, res, next) {
   next();
 })
 
+var randomSettedPoints = (function() {
+  let reuslt = {
+    location: null,
+    pm10: null,
+    color: null,
+    
+  }
+})()
+
 router.get('/', function(req, res) {
   res.json({
     data: [
+     
       {
-        id: 'Y0028152017154',
-        color: 'red',
-        location: 'xxx区新兴路yy号',
-        rank: '3级',
-        positionX: 104.07795346,
-        positionY: 30.67994585
-      },
-      {
-        id: '1440-0028-sclw-2859',
-        color: 'red',
-        location: 'xxx区新兴路yy号',
-        rank: '3级',
-        positionX: 104.02795346,
-        positionY: 30.62994585
-      },
-      {
-        id: 'Y0028141914002',
-        color: 'orange',
-        location: 'xxx区新兴路yy号',
-        rank: '2级',
-        positionX: 104.04795346,
-        positionY: 30.64994585
-      },
-      {
-        id: 'Y0028091510021',
-        color: 'yellow',
-        location: 'xxx区新兴路yy号',
-        rank: '1级',
-        positionX: 104.04795346,
-        positionY: 30.68994585
-      },
-
-      {
-        id: '1440-0028-sclw-2814',
+        id: '1440-0028-sclw-2814', // 最右端
         color: 'yellow',
         location: 'xxx区新兴路yy号',
         rank: '1级',
@@ -55,39 +32,16 @@ router.get('/', function(req, res) {
         positionY: 30.67994585
       },
       {
-        id: 'Y0028152618102',
-        color: 'yellow',
-        location: 'xxx区新兴路yy号',
-        rank: '1级',
-        positionX: 104.05795346,
-        positionY: 30.67924585
-      },
-      {
-        id: 'XHHB-Y0017040100175',
+        id: 'XHHB-Y0017040100175', // 最下最左
         color: 'yellow',
         location: 'xxx区新兴路yy号',
         rank: '1级',
         positionX: 104.01795346,
         positionY: 30.61994585
       },
+  
       {
-        id: 'Y0028152017154',
-        color: 'blue',
-        location: 'xxx区新兴路yy号',
-        rank: '0级',
-        positionX: 104.03795346,
-        positionY: 30.62994585
-      },
-      {
-        id: 'Y0028152017154',
-        color: 'blue',
-        location: 'xxx区新兴路yy号',
-        rank: '0级',
-        positionX: 104.05795346,
-        positionY: 30.64994585
-      },
-      {
-        id: 'Y0028152017154',
+        id: 'Y0028152017154', // 最上
         color: 'blue',
         location: 'xxx区新兴路yy号',
         rank: '0级',
