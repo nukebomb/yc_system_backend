@@ -11,6 +11,10 @@ router.all('*', function (req, res, next) {
   next();
 })
 
+
+
+
+
 // 创建点位信息，并保存为json文件，用于调用，每次运行默认不运行
 // var randomSettedPoints = (function () {
 //   let result = []
@@ -32,7 +36,126 @@ router.all('*', function (req, res, next) {
 //   return result
 // })()
 
-
+// 临时用的点位信息
+var locations = [{
+  "device_id": "1440-0028-sclw-2803",
+  "lng": 104.13328828752,
+  "lat": 30.628542467496,
+  "location": "成华区",
+  "pm10": 218.5
+},
+{
+  "device_id": "1440-0028-sclw-2804",
+  "lng": 104.13028962697,
+  "lat": 30.67376220597,
+  "location": "成华区",
+  "pm10": 263.3
+},
+{
+  "device_id": "1440-0028-sclw-2803",
+  "lng": 104.13328828752,
+  "lat": 30.628542467496,
+  "location": "成华区",
+  "pm10": 174.3
+},
+{
+  "device_id": "1440-0028-sclw-2804",
+  "lng": 104.13028962697,
+  "lat": 30.67376220597,
+  "location": "成华区",
+  "pm10": 212.8
+},
+{
+  "device_id": "1440-0028-sclw-2803",
+  "lng": 104.13328828752,
+  "lat": 30.628542467496,
+  "location": "成华区",
+  "pm10": 159.9
+},
+{
+  "device_id": "1440-0028-sclw-2804",
+  "lng": 104.13028962697,
+  "lat": 30.67376220597,
+  "location": "成华区",
+  "pm10": 197.9
+},
+{
+  "device_id": "1440-0028-sclw-2803",
+  "lng": 104.13328828752,
+  "lat": 30.628542467496,
+  "location": "成华区",
+  "pm10": 138.2
+},
+{
+  "device_id": "1440-0028-sclw-2804",
+  "lng": 104.13028962697,
+  "lat": 30.67376220597,
+  "location": "成华区",
+  "pm10": 151.4
+},
+{
+  "device_id": "1440-0028-sclw-2803",
+  "lng": 104.13328828752,
+  "lat": 30.628542467496,
+  "location": "成华区",
+  "pm10": 152.7
+},
+{
+  "device_id": "1440-0028-sclw-2804",
+  "lng": 104.13028962697,
+  "lat": 30.67376220597,
+  "location": "成华区",
+  "pm10": 190.5
+},
+{
+  "device_id": "1440-0028-sclw-2803",
+  "lng": 104.13328828752,
+  "lat": 30.628542467496,
+  "location": "成华区",
+  "pm10": 149.2
+},
+{
+  "device_id": "1440-0028-sclw-2804",
+  "lng": 104.13028962697,
+  "lat": 30.67376220597,
+  "location": "成华区",
+  "pm10": 189.8
+},
+{
+  "device_id": "1440-0028-sclw-2803",
+  "lng": 104.13328828752,
+  "lat": 30.628542467496,
+  "location": "成华区",
+  "pm10": 163.5
+},
+{
+  "device_id": "1440-0028-sclw-2804",
+  "lng": 104.13028962697,
+  "lat": 30.67376220597,
+  "location": "成华区",
+  "pm10": 213.9
+},
+{
+  "device_id": "1440-0028-sclw-2803",
+  "lng": 104.13328828752,
+  "lat": 30.628542467496,
+  "location": "成华区",
+  "pm10": 82.3
+},
+{
+  "device_id": "1440-0028-sclw-2804",
+  "lng": 104.13028962697,
+  "lat": 30.67376220597,
+  "location": "成华区",
+  "pm10": 117.3
+},
+{
+  "device_id": "1440-0028-sclw-2803",
+  "lng": 104.13328828752,
+  "lat": 30.628542467496,
+  "location": "成华区",
+  "pm10": 114.4
+}]
 
 router.get('/', function (req, res) {
   var data = fs.readFile('./points.json', function(err, data) {
@@ -43,6 +166,22 @@ router.get('/', function (req, res) {
       JSON.parse(data)
     )
   })
+
+  // 现在读取真实数据，临时用
+  // locations.forEach(ele => {
+  //   if(ele.pm10 <= 100) {
+  //     ele.color = "blue"
+  //   } else if(ele.pm10 > 100 && ele.pm10 <= 200) {
+  //     ele.color = 'yellow'
+  //   } else if (ele.pm10 > 200 && ele.pm10 <= 300) {
+  //     ele.color = 'orange'
+  //   } else {
+  //     ele.color = 'red'
+  //   }
+  // })
+  // res.json(
+  //   JSON.stringify(locations)
+  // )
 })
 
 
