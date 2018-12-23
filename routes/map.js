@@ -19,6 +19,7 @@ router.all('*', function (req, res, next) {
 // var randomSettedPoints = (function () {
 //   let result = []
 //   var colors = ['yellow','red','orange', 'blue']
+//   var areas = ['双流区', '武侯区', '金牛区', '高新区', '成华区']
 //   var maxWidth = 10417795346 - 10401795346
 //   var maxHeight = 3070994585 - 3061994585
 //   for (var i = 0; i < 80; i++) {
@@ -29,7 +30,8 @@ router.all('*', function (req, res, next) {
 //       color: colors[Math.floor(Math.random() * 4)],
 //       id: 'xy-m89x'+ Math.floor(Math.random() * 10000)+'sc',
 //       positionX: (10401795346 + Math.floor(Math.random() * maxWidth) +1) / 100000000 ,
-//       positionY: (3061994585 + Math.floor(Math.random() * maxHeight) + 1) / 100000000
+//       positionY: (3061994585 + Math.floor(Math.random() * maxHeight) + 1) / 100000000,
+//       area: areas[Math.floor(Math.random() * 5)]
 //     })
 //   }
 //   fs.writeFile('./points.json',JSON.stringify(result))
@@ -157,16 +159,55 @@ var locations = [{
   "pm10": 114.4
 }]
 
-router.get('/', function (req, res) {
-  var data = fs.readFile('./points.json', function(err, data) {
-    if(err) {
+router.get('/init', function (req, res) {
+  var data = fs.readFile('./points.json', function (err, data) {
+    if (err) {
       return console.log(err)
     }
     res.json(
       JSON.parse(data)
     )
   })
+})
+var areaTransform = function(str) {
+  let Zh = null
+  switch (str) {
+    case 'wuhou':
+      Zh = '武侯区'
+      break
+    case 'chenghua':
+      Zh = '成华区'
+      break
+    case 'gaoxin':
+      Zh = '高新区'
+      break
+    case 'shuangliu':
+      Zh = '双流区'
+      break
+    case 'jingniu':
+      Zh = '金牛区'
+      break
+  }
+  return Zh
+}
 
+router.get('/spec/:area/*', function (req, res) {
+  var area = areaTransform(req.params.area)
+  var resultData = []
+  var data = fs.readFile('./points.json', function (err, data) {
+    var toStr = JSON.parse(data)
+    if (err) {
+      return console.log(err)
+    }
+    toStr.forEach(item => {
+      if (item.area == area) {
+        resultData.push(item)
+      }
+    })
+    res.json(
+      resultData
+    )
+  })
   // 现在读取真实数据，临时用
   // locations.forEach(ele => {
   //   if(ele.pm10 <= 100) {

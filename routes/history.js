@@ -154,4 +154,11 @@ router.get('/zones/:start/:end', function (req, res) {
   })
 })
 
+
+router.get('/init', function(req, res) {
+  res.json({
+    category:['2015','2016','2017','2018'],
+    data:[251.28, 123.2217,102.4321,51.22345]
+  })
+})
 module.exports = router;
