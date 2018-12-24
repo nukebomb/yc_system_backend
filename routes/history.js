@@ -23,6 +23,10 @@ router.all('*', function (req, res, next) {
 //     })
 //   }
 // });
+router.post('/', function(req, res) {
+  console.log(req)
+  res.send(req)
+})
 router.get('/cdmonth', function (req, res) {
   let datetime = randomData.createDateArr('2016-03-01', '2016-03-31')
   res.json({
