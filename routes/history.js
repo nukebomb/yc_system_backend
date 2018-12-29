@@ -49,26 +49,39 @@ router.post('/', function(req, res) {
   var area = req.body.area
   var method = req.body.method
   var date = new Date(req.body.date)
-
+  var session = ['spring' ,'summer' ,'autumn' ,'winter']
   console.log(req.body.area)
   console.log(req.body.method)
   console.log(req.body.date)
-
-
+  console.log('************************8')
   if (method === 'year') {
+    console.log('选择了年')
+
       res.json({
         category: ['2015', '2016', '2017', '2018'],
         data: randomData.randomArr(100, 500, 4)
       })
-    } else if(method ==='spring' || 'summer' || 'autumn' || 'winter') {
+    } else if(session.indexOf(method) != -1) {
+      console.log('选择了季度')
       method = areaTransform(method)
       res.json({
       category: ['2015'+ '-' + method, '2016'+ '-' + method, '2017'+ '-' + method, '2018'+ '-' + method],
       data: randomData.randomArr(100, 500, 4)
     })
-    } else {
+    } else if(method === 'month') {
+
       // 选择的时间为月，产生一个月的数据
-      let start = date.getFullYear + (date.getMonth + 1)
+      console.log('选择了月')
+
+      var start = new Date(date)
+      var end = new Date(new Date(date.setMonth(date.getMonth() + 1)).setDate(-1))
+      var length = (end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24) + 1
+
+      res.json({
+        category: randomData.createDateArr(start, end),
+        data: randomData.randomArr(100, 500, length)
+
+      })
     }
     
   

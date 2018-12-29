@@ -169,7 +169,7 @@ router.get('/init', function (req, res) {
     )
   })
 })
-var areaTransform = function(str) {
+var areaTransform = function (str) {
   let Zh = null
   switch (str) {
     case 'wuhou':
@@ -192,22 +192,32 @@ var areaTransform = function(str) {
 }
 
 router.get('/spec/:area/*', function (req, res) {
-  var area = areaTransform(req.params.area)
-  var resultData = []
-  var data = fs.readFile('./points.json', function (err, data) {
-    var toStr = JSON.parse(data)
-    if (err) {
-      return console.log(err)
-    }
-    toStr.forEach(item => {
-      if (item.area == area) {
-        resultData.push(item)
-      }
+  if (req.params.area === 'allcity') {
+    var data = fs.readFile('./points.json', function (err, data) {
+      var toStr = JSON.parse(data)
+      res.json(
+        toStr
+      )
     })
-    res.json(
-      resultData
-    )
-  })
+  } else {
+    var area = areaTransform(req.params.area)
+    var resultData = []
+    var data = fs.readFile('./points.json', function (err, data) {
+      var toStr = JSON.parse(data)
+      if (err) {
+        return console.log(err)
+      }
+      toStr.forEach(item => {
+        if (item.area == area) {
+          resultData.push(item)
+        }
+      })
+      res.json(
+        resultData
+      )
+    })
+  }
+
   // 现在读取真实数据，临时用
   // locations.forEach(ele => {
   //   if(ele.pm10 <= 100) {
