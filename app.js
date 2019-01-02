@@ -9,6 +9,8 @@ var usersRouter = require('./routes/users');
 var homeRouter = require('./routes/home');
 var historyRouter = require('./routes/history');
 var mapRouter = require('./routes/map');
+var correction = require('./routes/correction');
+
 var bodyParser = require('body-parser')
 
 var app = express();
@@ -30,6 +32,8 @@ app.use('/users', usersRouter);
 app.use('/home', homeRouter)
 app.use('/history', historyRouter)
 app.use('/map', mapRouter)
+app.use('/correction', correction)
+
 
 
 // catch 404 and forward to error handler
