@@ -11,6 +11,7 @@ var historyRouter = require('./routes/history');
 var mapRouter = require('./routes/map');
 var correction = require('./routes/correction');
 var control = require('./routes/control');
+var predict = require('./routes/predict')
 
 var bodyParser = require('body-parser')
 
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/home', homeRouter)
@@ -35,7 +37,7 @@ app.use('/history', historyRouter)
 app.use('/map', mapRouter)
 app.use('/correction', correction)
 app.use('/control', control)
-
+app.use('/predict', predict)
 
 
 
