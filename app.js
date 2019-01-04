@@ -10,6 +10,7 @@ var homeRouter = require('./routes/home');
 var historyRouter = require('./routes/history');
 var mapRouter = require('./routes/map');
 var correction = require('./routes/correction');
+var control = require('./routes/control');
 
 var bodyParser = require('body-parser')
 
@@ -33,6 +34,8 @@ app.use('/home', homeRouter)
 app.use('/history', historyRouter)
 app.use('/map', mapRouter)
 app.use('/correction', correction)
+app.use('/control', control)
+
 
 
 
