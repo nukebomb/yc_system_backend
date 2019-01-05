@@ -57,6 +57,27 @@ router.post('/line', function(req, res) {
       '2018-04-30'],
       data: randomData.randomArr(100,321, 30)
     })
+  } else if(range == 'year') {
+    res.json({
+      category: ['2018-01',
+    '2018-02',
+    '2018-03',
+    '2018-04',
+    '2018-05',
+    '2018-06',
+    '2018-07',
+    '2018-08',
+    '2018-09',
+    '2018-10',
+    '2018-11',
+    '2018-12'],
+    data: randomData.randomArr(100,321, 12)
+    })  
+  } else {
+    res.json({
+      category: ['2018', '2019', '2020'],
+    data: randomData.randomArr(100,321, 3)
+    })
   }
   
 })

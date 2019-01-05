@@ -12,6 +12,7 @@ var mapRouter = require('./routes/map');
 var correction = require('./routes/correction');
 var control = require('./routes/control');
 var predict = require('./routes/predict')
+var contribution = require('./routes/contribution')
 
 var bodyParser = require('body-parser')
 
@@ -38,6 +39,7 @@ app.use('/map', mapRouter)
 app.use('/correction', correction)
 app.use('/control', control)
 app.use('/predict', predict)
+app.use('/contribution', contribution)
 
 
 
