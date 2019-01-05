@@ -13,6 +13,8 @@ var correction = require('./routes/correction');
 var control = require('./routes/control');
 var predict = require('./routes/predict')
 var contribution = require('./routes/contribution')
+var relation = require('./routes/relation')
+
 
 var bodyParser = require('body-parser')
 
@@ -40,6 +42,8 @@ app.use('/correction', correction)
 app.use('/control', control)
 app.use('/predict', predict)
 app.use('/contribution', contribution)
+app.use('/relation', relation)
+
 
 
 
