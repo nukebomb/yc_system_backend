@@ -73,9 +73,12 @@ router.get('/chengdu', function (req, res) {
 //   })
 // })
 
-router.get('/search/:area/:date', function (req, res) {
-  var area = req.params.area
-  var date = JSON.parse(req.params.date)
+router.post('/search', function (req, res) {
+  var area = req.body.area
+  var date = req.body.date
+  console.log(req.body)
+  console.log('*****************88')
+  console.log(date)
   var category = randomData.createMonthArr(date.startMonth, date.endMonth)
   var data = randomData.randomArr(20, 280, randomData.howmanyMonth)
   switch (area) {
