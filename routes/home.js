@@ -28,6 +28,39 @@ router.get('/years', function (req, res) {
   })
 })
 
+
+
+// ************
+// home 点位信息接口
+router.get('/:num', function(req, res) {
+  res.json({
+    "device_id" : "1440-0028-sclw-2803",
+		"lng" : 104.13328828752,
+		"lat" : 30.628542467496,
+		"location" : "510108",
+		"pm10" : 218.5
+  })
+})
+
+// home 表格用
+router.get('/table/:num', function(req, res) {
+  res.json({
+    "device_id" : "1440-0028-sclw-2803",
+		"device_address" : "成华区新客站片区",
+		"pm10" : 218.5
+  })
+})
+// home 折线图用
+router.get('/:num/:from/:to', function(req, res) {
+  res.json({
+    "device_id" : "1440-0028-sclw-2806",
+		"device_address" : "成华区新客站片区",
+		"pm10" : 218.5
+  })
+})
+// ************
+
+
 router.get('/chengdu', function (req, res) {
 
   res.json({

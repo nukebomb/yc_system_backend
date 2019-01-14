@@ -35,8 +35,8 @@ app.use(bodyParser.json())
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/home', homeRouter)
-app.use('/history', historyRouter)
+app.use('/database.device', homeRouter)
+app.use('/database.dayavg', historyRouter)
 app.use('/map', mapRouter)
 app.use('/correction', correction)
 app.use('/control', control)
