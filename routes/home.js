@@ -75,11 +75,10 @@ router.get('/chengdu', function (req, res) {
 
 router.post('/search', function (req, res) {
   var area = req.body.area
-  var date = req.body.date
+  var start = req.body.start
+  var end = req.body.end
   console.log(req.body)
-  console.log('*****************88')
-  console.log(date)
-  var category = randomData.createMonthArr(date.startMonth, date.endMonth)
+  var category = randomData.createMonthArr(start, end)
   var data = randomData.randomArr(20, 280, randomData.howmanyMonth)
   switch (area) {
     case 'allcity':
@@ -105,6 +104,41 @@ router.post('/search', function (req, res) {
     area,
     category,
     data
+  })
+})
+
+router.post('/postable', function (req, res) {
+  console.log(req.body)
+  res.json({
+    data: [{
+      name: 'Y0028152017154',
+      location: '成都后花园二期B区一标段',
+      level: '3级',
+    }, {
+      name: '1440-0028-sclw-2859',
+      location: '成都市锦江区娇子立交以南，成龙路以西项目',
+      level: '3级',
+    }, {
+      name: 'Y0028141914002',
+      location: '五横道北延线工程 ',
+      level: '2级',
+    },
+    {
+      name: 'Y0028091510021',
+      location: '成都科学城生态水环境工程项目部EPC总承包',
+      level: '1级',
+    },
+    {
+      name: '1440-0028-sclw-2814',
+      location: '绿岛筑三标段15号楼',
+      level: '1级',
+    },
+    {
+      name: 'Y0028152618102',
+      location: '锦巷兰台小区',
+      level: '1级',
+    }
+    ]
   })
 })
 
