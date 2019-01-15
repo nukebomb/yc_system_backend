@@ -32,30 +32,92 @@ router.get('/years', function (req, res) {
 
 // ************
 // home 点位信息接口
-router.get('/:num', function(req, res) {
-  res.json({
-    "device_id" : "1440-0028-sclw-2803",
-		"lng" : 104.13328828752,
-		"lat" : 30.628542467496,
-		"location" : "510108",
-		"pm10" : 218.5
-  })
+router.get('/region/:num', function(req, res) {
+  // res.json([{
+  //  "device_id" : "1440-0028-sclw-2803",
+	// 	"lng" : 104.13328828752,
+	// 	"lat" : 30.628542467496,
+  //   "location" : "510108",
+  //   "color": 'red',
+	// 	"pm10" : 218.5
+  // }])
+  // console.log(req.params)
+  
+  // 接口实际格式
+  // {
+  //   deviceAddress: "成华区圣灯街道理工大学片区地块二",
+  //   deviceId: "1440-0028-sclw-2857",
+  //   deviceName: "成华区圣灯街道办事处（铁建广场4#）",
+  //   id: 19,
+  //   lat: 30.683570377566,
+  //   lng: 104.14053311354,
+  //   regionalId: 510108
+  //   }
+  if (req.params.num == "allcity" || !req.params.num) {
+    // console.log('全市选择上了')
+    var data = fs.readFile('./points.json', function (err, data) {
+      var toStr = JSON.parse(data)
+      res.json(
+        toStr
+      )
+    })
+  } else {
+    var resultData = []
+    var data = fs.readFile('./points.json', function (err, data) {
+      var toStr = JSON.parse(data)
+      if (err) {
+        return console.log(err)
+      }
+      toStr.forEach(item => {
+        if (item.regionalId == req.params.num) {
+          resultData.push(item)
+        }
+      })
+      res.json(
+        resultData
+      )
+    })
+  }
 })
 
 // home 表格用
 router.get('/table/:num', function(req, res) {
-  res.json({
-    "device_id" : "1440-0028-sclw-2803",
-		"device_address" : "成华区新客站片区",
-		"pm10" : 218.5
-  })
+  // console.log(req.params)
+  res.json( res.json({
+    data: [{
+      device_id: 'Y0028152017154',
+      device_address: '成都后花园二期B区一标段',
+      level: '3级',
+    }, 
+    {
+      device_id: 'Y0028091510021',
+      device_address: '成都科学城生态水环境工程项目部EPC总承包',
+      level: '1级',
+    },
+    {
+      device_id: '1440-0028-sclw-2814',
+      device_address: '绿岛筑三标段15号楼',
+      level: '1级',
+    },
+    {
+      device_id: 'Y0028152618102',
+      device_address: '锦巷兰台小区',
+      level: '1级',
+    }
+    ]
+  }))
 })
 // home 折线图用
 router.get('/:num/:from/:to', function(req, res) {
+  // console.log(req.params)
+  var start = req.params.from
+  var end = req.params.to
+  var category = randomData.createMonthArr(start, end)
+  var data = randomData.randomArr(20, 280, randomData.howmanyMonth)
+  // console.log(category)
   res.json({
-    "device_id" : "1440-0028-sclw-2806",
-		"device_address" : "成华区新客站片区",
-		"pm10" : 218.5
+    category,
+    data
   })
 })
 // ************
@@ -107,41 +169,41 @@ router.get('/chengdu', function (req, res) {
 // })
 
 router.post('/search', function (req, res) {
-  var area = req.body.area
+  // var area = req.body.area
   var start = req.body.start
   var end = req.body.end
-  console.log(req.body)
+  // console.log(req.body)
   var category = randomData.createMonthArr(start, end)
   var data = randomData.randomArr(20, 280, randomData.howmanyMonth)
-  switch (area) {
-    case 'allcity':
-      area = '全市'
-      break;
-    case 'chenghua':
-      area = '成华区'
-      break;
-    case 'wuhou':
-      area = '武侯区'
-      break;
-    case 'gaoxin':
-      area = '高新区'
-      break;
-    case 'shaungliu':
-      area = '双流区'
-      break;
-    case 'jingliu':
-      area = '金牛区'
-      break;
-  }
+  // switch (area) {
+  //   case null:
+  //     area = '全市'
+  //     break;
+  //   case 'chenghua':
+  //     area = '成华区'
+  //     break;
+  //   case 'wuhou':
+  //     area = '武侯区'
+  //     break;
+  //   case 'gaoxin':
+  //     area = '高新区'
+  //     break;
+  //   case 'shaungliu':
+  //     area = '双流区'
+  //     break;
+  //   case 'jingliu':
+  //     area = '金牛区'
+  //     break;
+  // }
   res.json({
-    area,
+    // area,
     category,
     data
   })
 })
 
 router.post('/postable', function (req, res) {
-  console.log(req.body)
+  // console.log(req.body)
   res.json({
     data: [{
       name: 'Y0028152017154',

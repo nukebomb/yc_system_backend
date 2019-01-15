@@ -27,23 +27,131 @@ router.all('*', function (req, res, next) {
 
 // ************
 // 综合查询页面， 返回某个月精度为天的数据
-router.get('/month/:num/:start/:end', function (req, res) {
+router.get('/month/:num/:start/', function (req, res) {
+  // res.json({
+  //   "year": " 2016",
+  //   "month": "12",
+  //   "day": "01",
+  //   "pm10": 251.28000
+  // })
+  console.log(req.params)
+  var date = new Date(req.params.start)
+  var start = new Date(date)
+  var end = new Date(new Date(date.setMonth(date.getMonth() + 1)).setDate(-1))
+  var length = (end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24) + 1
   res.json({
-    "year": " 2016",
-    "month": "12",
-    "day": "01",
-    "pm10": 251.28000
+    category: randomData.createDateArr(start, end),
+    pm10: randomData.randomArr(100, 500, length)
   })
 })
 
+router.get('/season/:num/:season', function (req, res) {
+  method = areaTransform(req.params.season)
+  console.log(req.params.season)
+  res.json({
+    category: ['2015' + '-' + method, '2016' + '-' + method, '2017' + '-' + method, '2018' + '-' + method],
+    pm10: randomData.randomArr(100, 500, 4)
+  })
+})
+router.get('/year/:num', function (req, res) {
+  res.json({
+    category: ['2015', '2016', '2017', '2018'],
+    pm10: randomData.randomArr(100, 500, 4)
+  })
+})
+
+// 统计分析页面
+router.get('/predict/season/:num', function (req, res) {
+  res.json({
+    data: [
+      {
+        "year": " 2019",
+        "season": "spring",
+        "pm10": 251.28000
+      },
+      {
+        "year": " 2019",
+        "season": "summer",
+        "pm10": 251.28000
+      }, {
+        "year": " 2019",
+        "season": "autumn",
+        "pm10": 251.2800
+      }, {
+        "year": " 2019",
+        "season": "winter",
+        "pm10": 251.28000
+      }
+    ]
+  })
+})
+router.get('/predict/month/:num', function (req, res) {
+  res.json({
+    data: [
+      {
+        "year": " 2019",
+        "month": " 01",
+        "day": " 01",
+        "pm10": 251.28000
+      },
+      {
+        "year": " 2019",
+        "month": " 01",
+        "day": " 02",
+        "pm10": 251.28000
+      }
+    ]
+  })
+})
+router.get('/predict/year/:num', function (req, res) {
+  res.json({
+    data: [
+      {
+        "year": " 2019",
+        "month": " 01",
+        "pm10": 251.28000
+      },
+      {
+        "year": " 2019",
+        "month": " 02",
+        "pm10": 251.28000
+      }
+      , {
+        "year": " 2019",
+        "month": " 03",
+        "pm10": 251.28000
+      }
+    ]
+  })
+})
+router.get('/predict/threeyear/:num', function (req, res) {
+  res.json({
+    data: [
+      {
+        "year": " 2019",
+        "pm10": 251.28000
+      },
+      {
+        "year": " 2020",
+        "pm10": 251.28000
+      }
+      , {
+        "year": " 2021",
+        "pm10": 251.28000
+      }
+    ]
+  })
+})
+// ******************
+
 // 综合查询页面，
 router.get('/session/:num/:start/:end', function (req, res) {
-  res.json({
-    "year": " 2016",
-    "month": "12",
-    "day": "01",
-    "pm10": 251.28000
-  })
+  // res.json({
+  //   "year": " 2016",
+  //   "month": "12",
+  //   "day": "01",
+  //   "pm10": 251.28000
+  // })
 })
 
 // ************
