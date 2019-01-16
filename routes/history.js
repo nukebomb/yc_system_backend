@@ -60,7 +60,7 @@ router.get('/year/:num', function (req, res) {
   })
 })
 
-// 统计分析页面
+// 统计分析页面de预测趋势部分
 router.get('/predict/season/:num', function (req, res) {
   res.json({
     data: [
